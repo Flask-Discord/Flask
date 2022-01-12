@@ -1,6 +1,6 @@
 module.exports = {
     name: 'rps',
-    description: 'plays rock paper sus',
+    description: 'Plays rock paper scissors',
     async execute(message, client, args, Discord) {
       // This is required for this command to work 
       const { MessageActionRow, MessageButton } = require('discord.js');
@@ -10,7 +10,7 @@ module.exports = {
      // Main code is under by the way 
     
       let Choice = ['🪨', '📰', '✂️'] // What the bot picks out of.
-      let botChoice = Choice[Math.floor(Math.random() * Choice.length)] //Picks a random emoji from that string ['🪨', '📰', '✂️'] so out of that.
+      let botChoice = Choice[Math.floor(Math.random() * Choice.length)] //Pick a random emoji from that string ['🪨', '📰', '✂️'] so out of that.
 
       // Rock
       const bRock = new MessageButton()
@@ -34,7 +34,7 @@ module.exports = {
 
      // To send the Buttons and also a embed/message etc works as the normal v13 ways :)
       message.channel.send({
-        content: `I have choicen ${botChoice}, you only know this for a test`, components: [Buttons]
+        content: `I have chose ${botChoice}, Alpha command, not finished!`, components: [Buttons]
       })
 
      // Now to collect the buton clicks
